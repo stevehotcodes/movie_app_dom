@@ -1,0 +1,115 @@
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+    background-image: url('./images.jpeg');
+    background-size:100%;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#444;
+    letter-spacing: 1px;
+
+}
+h1,h2{
+    font-weight:normal
+}
+
+#wrapper{
+    background-color:#eee;
+    width:90%;
+    max-width:60rem;
+    margin:20px auto;
+    border-radius:0.4rem;
+    box-shadow:1px 10px 10xp rgba(0,0,0,0.7);
+    padding:0 0px 20px;
+    overflow: hidden;
+}
+
+.page-banner{
+    background-image:url('./tulip-8244705_1280.jpg');
+    width:100%;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.page-banner>h1, .page-banner>p{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+#add-movie,#movie-list{
+    margin:40px;
+    /* border:2px solid red; */
+}
+
+
+
+ul>li{
+    list-style-type: none;
+    padding:5px 10px ;
+    /* border:2px solid red; */
+    margin:10px ;
+    border-bottom:2px solid #d48989;
+}
+
+#movie-list li:hover{
+    border-bottom:2px solid #66d76a;
+    color:rgb(115, 113, 113)
+
+}
+.delete{
+    cursor:pointer;
+    background-color:rgb(158,0,23);
+    color:white;
+    padding:10px 20px ;
+    float:center
+
+}
+.delete:hover{
+    background-color: white;
+    color:rgb(158,0,23)
+}
+
+
+#add-movie{
+    
+    width:400px;
+    margin:20px auto;
+    /* display: flex; */
+    
+
+}
+#add-movie input{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    /* float: left; */
+    clear: both;
+
+}
+
+#add-movie button{
+    cursor:pointer;
+    background-color:rgb(23, 145, 74);
+    color:white;
+    padding:10px 20px ;
+    float:center
+}
+
+#add-movie button:hover{
+   color:black;
+   background-color: white;
+}
+
+#add-movie:after{
+    content: "";
+    display : block;
+    clear: both;
+}
+
+
