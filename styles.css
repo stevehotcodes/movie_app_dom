@@ -54,6 +54,9 @@ ul>li{
     margin:10px ;
     border-bottom:2px solid #d48989;
 }
+li{
+    display: block;
+}
 
 #movie-list li:hover{
     border-bottom:2px solid #66d76a;
@@ -64,8 +67,9 @@ ul>li{
     cursor:pointer;
     background-color:rgb(158,0,23);
     color:white;
-    padding:10px 20px ;
-    float:center
+    padding:20px 20px ;
+    float:right;
+    /* margin-top:100px; */
 
 }
 .delete:hover{

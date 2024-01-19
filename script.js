@@ -91,26 +91,27 @@ document.addEventListener('DOMContentLoaded',()=>{
 
             movieArray.forEach((item)=>{
 
-                // const movieItem=document.createElement('li')
-                const movieName=document.createElement('span')
-                const movieDate=document.createElement('span')
-                const deleteBtn=document.querySelector('.delete')
+                const movieItem=document.createElement('li')
+                const movieName=document.createElement('div')
+                const movieDate=document.createElement('div')
+                const deleteBtn=document.createElement('span')
         
                 //add text content to the movie name and movie date spans
-                movieName.textContent=item.name
-                movieDate.textContent=item.dateReleased;
+                movieName.textContent= `Movie Name:${item.name}`
+                movieDate.textContent=`Date Released:${item.dateReleased}`;
                 deleteBtn.textContent='delete'
                 // add classname to the movie released date and name
                 movieName.classList.add('name');
                 movieDate.classList.add('release-date');
                 deleteBtn.classList.add('delete');
+                movieItem.classList.add('movie-item')
 
                 // append the elements to the DOM
-                label.appendChild(movieName);
-                dateLabel.appendChild(movieDate);
+                // label.appendChild(movieName);
+                // dateLabel.appendChild(movieDate);
 
-                movieItem.appendChild(label)
-                movieItem.appendChild(dateLabel)
+                movieItem.appendChild(movieName)
+                movieItem.appendChild(movieDate)
                 movieItem.appendChild(deleteBtn)
 
                 movieListWrapper.appendChild(movieItem)
@@ -122,9 +123,29 @@ document.addEventListener('DOMContentLoaded',()=>{
                 addMovieForm.querySelector('input[type=text]').value=""
                 addMovieForm.querySelector('input[type=date]').value=""
 
+
+                deleteBtn.addEventListener('click',(index)=>{
+            
+                    movieListWrapper.removeChild(movieItem);
+                    movieArray.splice(index,1)
+                    localStorage.setItem(localStorageKey, JSON.stringify(movieArray));
+    
+                })
+
             })
 
+            
+
         }
+
+
+        
+    }
+
+
+    function deleteItem(){
+
+
     }
 
 })
